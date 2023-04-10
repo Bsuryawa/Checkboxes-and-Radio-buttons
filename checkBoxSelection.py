@@ -21,11 +21,9 @@ time.sleep(2)
 #radio button handling
 radiobuttons = driver.find_elements(By.XPATH, "//input[@type='radio']")
 print(len(radiobuttons))
-for radiobutton in radiobuttons:
-    if radiobutton.get_attribute(("value")) == "radio3":
-        radiobutton.click()
-        radiobutton.is_selected()
-        break
+radiobuttons[2].click()
+radiobuttons[2].is_selected()
+
 driver.close()
 
 
